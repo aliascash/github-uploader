@@ -8,3 +8,6 @@ RUN apk add git \
  && go get github.com/aktau/github-release
 
 RUN github-release --help
+
+# Create mountpoint for file to deploy
+RUN mkdir /tmp/filesToDeploy
