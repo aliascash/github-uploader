@@ -5,8 +5,7 @@ With this tool you can upload respectively deploy any kind of artifacts
 to a release tag on GitHub.
 
 ## Facts
-* Image is based on official _golang_ image, which is based on Alpine Linux
-* Dedicated user _spectre_ with UID 1000 and GID 1000
+* Image is based on official _Alpine Linux_ based [_golang_ image](https://hub.docker.com/_/golang/)
 * Additional installed packages:
   * git
 
