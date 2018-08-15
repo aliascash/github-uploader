@@ -43,14 +43,14 @@ docker run \
     --rm \
     -it \
     -e GITHUB_TOKEN=${GITHUB_TOKEN} \
-    -v <folder-with-files-to-upload>:/tmp/filesToDeploy \
+    -v <folder-with-files-to-upload>:/filesToUpload \
     spectreproject/github-deployer:latest \
     github-release upload \
         --user <GitHub-user-or-organization-name> \
         --repo <GitHub-repo> \
         --tag <tag-on-GitHub-repo> \
         --name <name-of-file-after-upload> \
-        --file /tmp/filesToDeploy/<file-to-upload>
+        --file /filesToUpload/<file-to-upload>
 ```
 
 All other commands of _github-release_ can be used the same way.
@@ -63,14 +63,14 @@ docker run \
     --rm \
     -it \
     -e GITHUB_TOKEN=${GITHUB_TOKEN} \
-    -v ~/filesToDeploy:/tmp/filesToDeploy \
+    -v ~/filesToDeploy:/filesToUpload \
     spectreproject/github-deployer:latest \
     github-release upload \
         --user HLXEasy \
         --repo GitHub-Deployer \
         --tag latest \
         --name "notes.txt" \
-        --file /tmp/filesToDeploy/aTest.txt
+        --file /filesToUpload/aTest.txt
 ```
 
 ### Short explanation of parameters:
@@ -79,7 +79,7 @@ docker run \
 docker run \
     --rm \                                  # Container will automatically be removed afterwards
     -it \                                   # Start in interactive mode with a virtual terminal
-    -v <local-path>:/tmp/filesToDeploy/ \   # Mapping of local data folder into the container
+    -v <local-path>:/filesToUpload/ \       # Mapping of local data folder into the container
     spectreproject/github-deployer:latest \ # Image to use
     github-release ...                      # Executed command followed by all it's parameters
 ```
