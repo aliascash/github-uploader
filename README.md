@@ -1,4 +1,10 @@
 # GitHub-Uploader
+
+[![Docker Stars](https://img.shields.io/docker/stars/spectreproject/github-uploader.svg)](https://hub.docker.com/r/spectreproject/github-uploader/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/spectreproject/github-uploader.svg)](https://hub.docker.com/r/spectreproject/github-uploader/)
+[![Build Status](https://travis-ci.org/spectreproject/github-uploader.svg?branch=master)](https://travis-ci.org/spectreproject/github-uploader/)
+[![ImageLayers](https://images.microbadger.com/badges/image/spectreproject/github-uploader.svg)](https://microbadger.com/#/images/spectreproject/github-uploader)
+
 This repository contains a Dockerfile to create an image with the very
 nice tool [github-release](https://github.com/aktau/github-release).
 With this tool you can upload respectively deploy any kind of artifacts
