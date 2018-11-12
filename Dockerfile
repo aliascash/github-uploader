@@ -1,4 +1,4 @@
-FROM golang:1.11-rc-alpine3.7
+FROM golang:1.11.2-alpine3.7
 MAINTAINER HLXEasy <hlxeasy@gmail.com>
 
 RUN apk add git \
