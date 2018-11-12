@@ -1,8 +1,9 @@
 # GitHub-Uploader
 
+[![GitHub version](https://badge.fury.io/gh/spectrecoin%2Fgithub-uploader.svg)](https://badge.fury.io/gh/spectrecoin%2Fgithub-uploader) [![HitCount](http://hits.dwyl.io/spectrecoin/https://github.com/spectrecoin/github-uploader.svg)](http://hits.dwyl.io/spectrecoin/https://github.com/spectrecoin/github-uploader)
+[![Build Status](https://ci.spectreproject.io/buildStatus/icon?job=Spectrecoin/github-uploader/develop)](https://ci.spectreproject.io/job/Spectrecoin/job/github-uploader/job/develop/)
 [![Docker Stars](https://img.shields.io/docker/stars/spectreproject/github-uploader.svg)](https://hub.docker.com/r/spectreproject/github-uploader/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/spectreproject/github-uploader.svg)](https://hub.docker.com/r/spectreproject/github-uploader/)
-[![Build Status](https://travis-ci.org/spectreproject/github-uploader.svg?branch=master)](https://travis-ci.org/spectreproject/github-uploader/)
 [![ImageLayers](https://images.microbadger.com/badges/image/spectreproject/github-uploader.svg)](https://microbadger.com/#/images/spectreproject/github-uploader)
 
 This repository contains a Dockerfile to create an image with the very
