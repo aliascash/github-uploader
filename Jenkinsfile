@@ -12,7 +12,7 @@ pipeline {
     }
     environment {
         UPLOADER_VERSION = '1.0'
-        DISCORD_WEBHOOK = credentials('991ce248-5da9-4068-9aea-8a6c2c388a19')
+        DISCORD_WEBHOOK = credentials('DISCORD_WEBHOOK')
     }
     stages {
         stage('Notification') {
