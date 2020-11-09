@@ -37,7 +37,7 @@ pipeline {
             }
             steps {
                 script {
-                    withDockerRegistry(credentialsId: '051efa8c-aebd-40f7-9cfd-0053c413266e') {
+                    withDockerRegistry(credentialsId: 'DockerHub-Login') {
                         sh "docker build --rm -t spectreproject/github-uploader:latest ."
                         sh "docker push spectreproject/github-uploader:latest"
                     }
@@ -50,7 +50,7 @@ pipeline {
             }
             steps {
                 script {
-                    withDockerRegistry(credentialsId: '051efa8c-aebd-40f7-9cfd-0053c413266e') {
+                    withDockerRegistry(credentialsId: 'DockerHub-Login') {
                         sh "docker build --rm -t spectreproject/github-uploader:${UPLOADER_VERSION} ."
                         sh "docker push spectreproject/github-uploader:${UPLOADER_VERSION}"
                     }
