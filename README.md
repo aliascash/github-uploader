@@ -30,12 +30,7 @@ You should prepare a directory on the host machine, which contains all
 files, which should be uploaded to GitHub. This directory will be mounted
 into the container.
 
-Additionally you need a proper GitHub access token and put it into the
-environemt variable _GITHUB_TOKEN_:
-
-```
-export GITHUB_TOKEN=1234568790abcdef
-```
+Additionally you need a proper GitHub access token.
 
 ### Available commands
 To see a list of available commands and options you can run a container
@@ -56,10 +51,10 @@ To do an upload the usage schema is as follows:
 docker run \
     --rm \
     -it \
-    -e GITHUB_TOKEN=${GITHUB_TOKEN} \
     -v <folder-with-files-to-upload>:/filesToUpload \
     aliascash/github-uploader:latest \
     github-release upload \
+        --security-token <GitHub-Token> \
         --user <GitHub-user-or-organization-name> \
         --repo <GitHub-repo> \
         --tag <tag-on-GitHub-repo> \
@@ -76,10 +71,10 @@ available as _notes.txt_ on the given tag _latest_:
 docker run \
     --rm \
     -it \
-    -e GITHUB_TOKEN=${GITHUB_TOKEN} \
     -v ~/filesToDeploy:/filesToUpload \
     aliascash/github-uploader:latest \
     github-release upload \
+        --security-token <GitHub-Token> \
         --user HLXEasy \
         --repo GitHub-Deployer \
         --tag latest \
