@@ -1,4 +1,9 @@
 #!groovy
+// SPDX-FileCopyrightText: © 2020 Alias Developers
+// SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
+//
+// SPDX-License-Identifier: MIT
+
 
 pipeline {
     agent {
@@ -38,8 +43,8 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: '051efa8c-aebd-40f7-9cfd-0053c413266e') {
-                        sh "docker build --rm -t spectreproject/github-uploader:latest ."
-                        sh "docker push spectreproject/github-uploader:latest"
+                        sh "docker build --rm -t aliascash/github-uploader:latest ."
+                        sh "docker push aliascash/github-uploader:latest"
                     }
                 }
             }
@@ -51,8 +56,8 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: '051efa8c-aebd-40f7-9cfd-0053c413266e') {
-                        sh "docker build --rm -t spectreproject/github-uploader:${UPLOADER_VERSION} ."
-                        sh "docker push spectreproject/github-uploader:${UPLOADER_VERSION}"
+                        sh "docker build --rm -t aliascash/github-uploader:${UPLOADER_VERSION} ."
+                        sh "docker push aliascash/github-uploader:${UPLOADER_VERSION}"
                     }
                 }
             }

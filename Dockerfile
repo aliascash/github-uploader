@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: © 2020 Alias Developers
+# SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
+#
+# SPDX-License-Identifier: MIT
+
 FROM golang:1.11.2-alpine3.7
 MAINTAINER HLXEasy <hlxeasy@gmail.com>
 

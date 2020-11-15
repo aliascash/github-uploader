@@ -1,15 +1,22 @@
 # GitHub-Uploader
 
-[![GitHub version](https://badge.fury.io/gh/spectrecoin%2Fgithub-uploader.svg)](https://badge.fury.io/gh/spectrecoin%2Fgithub-uploader) [![HitCount](http://hits.dwyl.io/spectrecoin/https://github.com/spectrecoin/github-uploader.svg)](http://hits.dwyl.io/spectrecoin/https://github.com/spectrecoin/github-uploader)
-[![Build Status](https://ci.spectreproject.io/buildStatus/icon?job=Spectrecoin/github-uploader/develop)](https://ci.spectreproject.io/job/Spectrecoin/job/github-uploader/job/develop/)
-[![Docker Stars](https://img.shields.io/docker/stars/spectreproject/github-uploader.svg)](https://hub.docker.com/r/spectreproject/github-uploader/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/spectreproject/github-uploader.svg)](https://hub.docker.com/r/spectreproject/github-uploader/)
-[![ImageLayers](https://images.microbadger.com/badges/image/spectreproject/github-uploader.svg)](https://microbadger.com/#/images/spectreproject/github-uploader)
+[![GitHub version](https://badge.fury.io/gh/aliascash%2Fgithub-uploader.svg)](https://badge.fury.io/gh/aliascash%2Fgithub-uploader) [![HitCount](http://hits.dwyl.io/aliascash/https://github.com/aliascash/github-uploader.svg)](http://hits.dwyl.io/aliascash/https://github.com/aliascash/github-uploader)
+[![Build Status](https://ci.alias.cash/buildStatus/icon?job=aliascash/github-uploader/develop)](https://ci.alias.cash/job/aliascash/job/github-uploader/job/develop/)
+[![Docker Stars](https://img.shields.io/docker/stars/aliascash/github-uploader.svg)](https://hub.docker.com/r/aliascash/github-uploader/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/aliascash/github-uploader.svg)](https://hub.docker.com/r/aliascash/github-uploader/)
+[![ImageLayers](https://images.microbadger.com/badges/image/aliascash/github-uploader.svg)](https://microbadger.com/#/images/aliascash/github-uploader)
 
 This repository contains a Dockerfile to create an image with the very
 nice tool [github-release](https://github.com/aktau/github-release).
 With this tool you can upload respectively deploy any kind of artifacts
 to a release tag on GitHub.
+
+## Licensing
+
+- SPDX-FileCopyrightText: © 2020 Alias Developers
+- SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
+
+SPDX-License-Identifier: MIT
 
 ## Facts
 * Image is based on official _Alpine Linux_ based [_golang_ image](https://hub.docker.com/_/golang/)
@@ -35,7 +42,7 @@ To see a list of available commands and options you can run a container
 with this command:
 
 ```
-docker run --rm -it spectreproject/github-uploader:latest github-release --help
+docker run --rm -it aliascash/github-uploader:latest github-release --help
 ```
 
 For further details regarding usage of _github-release_ please see it's
@@ -51,7 +58,7 @@ docker run \
     -it \
     -e GITHUB_TOKEN=${GITHUB_TOKEN} \
     -v <folder-with-files-to-upload>:/filesToUpload \
-    spectreproject/github-deployer:latest \
+    aliascash/github-uploader:latest \
     github-release upload \
         --user <GitHub-user-or-organization-name> \
         --repo <GitHub-repo> \
@@ -71,7 +78,7 @@ docker run \
     -it \
     -e GITHUB_TOKEN=${GITHUB_TOKEN} \
     -v ~/filesToDeploy:/filesToUpload \
-    spectreproject/github-deployer:latest \
+    aliascash/github-uploader:latest \
     github-release upload \
         --user HLXEasy \
         --repo GitHub-Deployer \
@@ -87,11 +94,11 @@ docker run \
     --rm \                                  # Container will automatically be removed afterwards
     -it \                                   # Start in interactive mode with a virtual terminal
     -v <local-path>:/filesToUpload/ \       # Mapping of local data folder into the container
-    spectreproject/github-deployer:latest \ # Image to use
+    aliascash/github-uploader:latest \      # Image to use
     github-release ...                      # Executed command followed by all it's parameters
 ```
 
 ## How to build image from scratch
 ```
-docker build -t spectreproject/github-uploader:latest .
+docker build -t aliascash/github-uploader:latest .
 ```
