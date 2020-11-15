@@ -63,9 +63,6 @@ pipeline {
         }
     }
     post {
-        always {
-            sh "docker system prune --all --force"
-        }
         success {
             script {
                 if (!hudson.model.Result.SUCCESS.equals(currentBuild.getPreviousBuild()?.getResult())) {
