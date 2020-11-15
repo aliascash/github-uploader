@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-FROM golang:1.11.2-alpine3.7
+FROM golang:1.15.5-alpine3.12
 MAINTAINER HLXEasy <hlxeasy@gmail.com>
 
 RUN apk add git \
