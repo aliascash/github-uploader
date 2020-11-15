@@ -17,7 +17,7 @@ pipeline {
     }
     environment {
         UPLOADER_VERSION = '1.0'
-        DISCORD_WEBHOOK = credentials('991ce248-5da9-4068-9aea-8a6c2c388a19')
+        DISCORD_WEBHOOK = credentials('DISCORD_WEBHOOK')
     }
     stages {
         stage('Notification') {
@@ -42,7 +42,7 @@ pipeline {
             }
             steps {
                 script {
-                    withDockerRegistry(credentialsId: '051efa8c-aebd-40f7-9cfd-0053c413266e') {
+                    withDockerRegistry(credentialsId: 'DockerHub-Login') {
                         sh "docker build --rm -t aliascash/github-uploader:latest ."
                         sh "docker push aliascash/github-uploader:latest"
                     }
@@ -55,7 +55,7 @@ pipeline {
             }
             steps {
                 script {
-                    withDockerRegistry(credentialsId: '051efa8c-aebd-40f7-9cfd-0053c413266e') {
+                    withDockerRegistry(credentialsId: 'DockerHub-Login') {
                         sh "docker build --rm -t aliascash/github-uploader:${UPLOADER_VERSION} ."
                         sh "docker push aliascash/github-uploader:${UPLOADER_VERSION}"
                     }
